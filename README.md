@@ -1,10 +1,10 @@
 # cloudly
 
-A new Flutter project.
+An app to show the weather in different countries.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Here's some resources to get started in flutter
 
 A few resources to get you started if this is your first Flutter project:
 
