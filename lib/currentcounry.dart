@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+class nigeria {
+  String main;
+  String description;
+  String icon;
+  nigeria({required this.main, required this.description, required this.icon});
+}
+
 class Nigeria extends StatefulWidget {
   const Nigeria({super.key});
 
@@ -39,7 +46,7 @@ class _NigeriaState extends State<Nigeria> {
                         color: Colors.white),
                   ),
                   const SizedBox(
-                    width: 168,
+                    width: 150,
                   ),
                   Text(
                     currentdate,
@@ -86,7 +93,6 @@ class _NigeriaState extends State<Nigeria> {
         ),
         //this is where the location (NIGERIA) and city lagos shows on the UI
         Container(
-          color: Colors.green,
           height: 30,
           width: 270,
           child:
@@ -98,6 +104,13 @@ class _NigeriaState extends State<Nigeria> {
                 width: 70,
                 child: Image.network(
                     'https://img.icons8.com/?size=2x&id=Bdm9Ljn0yyGl&format=png'),
+              ),
+              const Text(
+                'Africa Nigeria , Lagos',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 252, 242, 153),
+                ),
               ),
             ],
           ),
