@@ -1,5 +1,6 @@
 import 'package:cloudly/currentcounry.dart';
 import 'package:flutter/material.dart';
+import 'countriesbuilder.dart';
 
 class Maincontent extends StatefulWidget {
   const Maincontent({super.key});
@@ -51,7 +52,12 @@ class _MaincontentState extends State<Maincontent> {
             ),
           ]),
         ]),
+        //this is the card displaying the Nigeria card and allat.
         Nigeria(),
+        const SizedBox(
+          height: 40,
+        ),
+        countrylistview(),
       ],
     );
   }

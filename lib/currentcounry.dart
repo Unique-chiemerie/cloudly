@@ -83,9 +83,9 @@ class _NigeriaState extends State<Nigeria> {
                       return const Text('An error occurred');
                     } else if (snapshot.hasData) {
                       return Container(
-                        margin: const EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(5),
                         height: 100,
-                        width: 70,
+                        width: 100,
                         child: Image.network(
                           'https://openweathermap.org/img/w/${snapshot.data!.icon}.png',
                         ),
@@ -97,7 +97,7 @@ class _NigeriaState extends State<Nigeria> {
                     }
                   },
                 ),
-                const SizedBox(width: 50),
+
                 // Weather Description
                 FutureBuilder<NigeriaData>(
                   future: futureData,
@@ -113,8 +113,16 @@ class _NigeriaState extends State<Nigeria> {
                       return Container(
                         margin: const EdgeInsets.all(10),
                         height: 100,
-                        width: 100,
-                        child: Text(snapshot.data!.description),
+                        width: 140,
+                        child: Expanded(
+                          child: Text(
+                            snapshot.data!.description,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 30,
+                                color: Colors.yellow),
+                          ),
+                        ),
                       );
                     } else {
                       return const Center(
