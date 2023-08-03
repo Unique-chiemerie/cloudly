@@ -88,7 +88,7 @@ class _homepageState extends State<homepage> {
             getStarted();
           },
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 241, 218, 12),
+            backgroundColor: const Color.fromARGB(255, 241, 218, 12),
           ),
           child: const Text('Get Started'),
         ),

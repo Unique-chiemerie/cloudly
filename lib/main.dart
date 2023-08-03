@@ -6,10 +6,10 @@ void main() {
     MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        primaryColor: Color.fromARGB(121, 0, 0, 0),
+        primaryColor: const Color.fromARGB(121, 0, 0, 0),
       ),
       debugShowCheckedModeBanner: false,
-      home: CloudlyMain(),
+      home: const CloudlyMain(),
     ),
   );
 }
@@ -25,20 +25,26 @@ class _CloudlyMainState extends State<CloudlyMain> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Column(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 0, 0, 0),
-                  Color.fromARGB(255, 33, 33, 33),
-                ],
-              ),
+          Expanded(
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 0, 0, 0),
+                          Color.fromARGB(255, 33, 33, 33),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const homepage(),
+              ],
             ),
-          ),
-          const Expanded(
-            child: homepage(),
           ),
         ],
       ),
