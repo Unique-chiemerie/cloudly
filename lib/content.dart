@@ -62,11 +62,12 @@ class _MaincontentState extends State<Maincontent> {
       if (search.isNotEmpty) {
         filtered = countrylist
             .where(
-              (country) => country.countryname.toLowerCase().contains(
-                    search.toLowerCase(),
-                  ),
+              (country) => country.countryname
+                  .toLowerCase()
+                  .contains(search.toLowerCase()),
             )
             .toList();
+        print("Filtered Countries: $filtered");
       } else {
         filtered = countrylist;
       }
@@ -156,6 +157,9 @@ class _MaincontentState extends State<Maincontent> {
                 child: ListView.builder(
                   itemCount: filtered.length,
                   itemBuilder: (context, index) {
+                    print("Filtered List Length: ${filtered.length}");
+                    print("Filtered List: $filtered");
+
 //this is the ontap of our build
                     void tapcun() {
                       showModalBottomSheet(
