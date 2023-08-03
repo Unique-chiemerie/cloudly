@@ -3,7 +3,11 @@ import 'package:cloudly/homepage.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
+      theme: ThemeData(
+        useMaterial3: true,
+        primaryColor: Color.fromARGB(121, 0, 0, 0),
+      ),
       debugShowCheckedModeBanner: false,
       home: CloudlyMain(),
     ),
@@ -27,8 +31,8 @@ class _CloudlyMainState extends State<CloudlyMain> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromARGB(255, 48, 3, 88),
-                  Color.fromARGB(255, 94, 45, 168)
+                  Color.fromARGB(255, 0, 0, 0),
+                  Color.fromARGB(255, 33, 33, 33),
                 ],
               ),
             ),

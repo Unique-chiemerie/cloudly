@@ -18,8 +18,8 @@ class _MainscreenState extends State<Mainscreen> {
             child: Container(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(colors: [
-                  Color.fromARGB(255, 48, 3, 88),
-                  Color.fromARGB(255, 94, 45, 168)
+                  Color.fromARGB(255, 0, 0, 0),
+                  Color.fromARGB(255, 33, 33, 33),
                 ]),
               ),
             ),

@@ -29,7 +29,7 @@ class _NigeriaState extends State<Nigeria> {
       width: 310,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: const Color.fromARGB(87, 0, 0, 0),
+        color: const Color.fromARGB(255, 255, 255, 255),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +47,7 @@ class _NigeriaState extends State<Nigeria> {
                       style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                          color: Colors.black),
                     ),
                     const SizedBox(
                       width: 150,
@@ -57,13 +57,10 @@ class _NigeriaState extends State<Nigeria> {
                       style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                          color: Colors.black),
                     ),
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 5,
               ),
             ],
           ),
@@ -72,6 +69,8 @@ class _NigeriaState extends State<Nigeria> {
             height: 100,
             width: 270,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Weather Icon
                 FutureBuilder<NigeriaData>(
@@ -83,7 +82,6 @@ class _NigeriaState extends State<Nigeria> {
                       return const Text('An error occurred');
                     } else if (snapshot.hasData) {
                       return Container(
-                        margin: const EdgeInsets.all(5),
                         height: 100,
                         width: 100,
                         child: Image.network(
@@ -111,16 +109,17 @@ class _NigeriaState extends State<Nigeria> {
                           'There was an error from the dev angle');
                     } else if (snapshot.hasData) {
                       return Container(
-                        margin: const EdgeInsets.all(10),
                         height: 100,
                         width: 140,
-                        child: Expanded(
-                          child: Text(
-                            snapshot.data!.description,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 30,
-                                color: Colors.yellow),
+                        child: Center(
+                          child: Expanded(
+                            child: Text(
+                              snapshot.data!.description,
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 30,
+                                  color: Colors.black),
+                            ),
                           ),
                         ),
                       );
@@ -148,9 +147,16 @@ class _NigeriaState extends State<Nigeria> {
                 const Text(
                   'Africa Nigeria , Lagos',
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 252, 242, 153),
-                  ),
+                      fontWeight: FontWeight.bold, color: Colors.black),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  height: 50,
+                  width: 50,
+                  child: Image.network(
+                      'https://cdn-icons-png.flaticon.com/128/9993/9993892.png'),
                 ),
               ],
             ),
